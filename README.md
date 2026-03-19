@@ -31,4 +31,27 @@ Greedy player Alan takes 7 coins from heap 2 and puts nothing
 State: 0, 0, 0 with 3/4 playing next
 Greedy player Alan wins
 
-All the files are needed in order for the game to work
+All the files are needed in order for the game to work. 
+
+You can write for example: 
+
+int main() {
+    // 1. Initialize the game with 3 heaps and 4 players [cite: 137]
+    Game specker(3, 4);
+
+    // 2. Add the initial coin counts for each heap 
+    specker.addHeap(10);
+    specker.addHeap(20);
+    specker.addHeap(17);
+
+    // 3. Add the players with their specific strategies and names 
+    specker.addPlayer(new SneakyPlayer("Tom"));
+    specker.addPlayer(new SpartanPlayer("Mary"));
+    specker.addPlayer(new GreedyPlayer("Alan"));
+    specker.addPlayer(new RighteousPlayer("Robin"));
+
+    // 4. Start the game simulation and output to the console 
+    specker.play(cout);
+
+    return 0;
+}
