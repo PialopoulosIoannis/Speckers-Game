@@ -3,6 +3,8 @@ using namespace std;
 #include <string>  
 //#include "classes.h"  
 #include <stdexcept>  
+#include "Player_and_type_of_players.h"
+#include "Move_and_State.h"    //Those are the same as the .cpp files but in header format
   
 class Game {  
   
